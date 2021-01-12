@@ -1,4 +1,4 @@
-## Hi there, I'm Bayu Utomo - aka [byciikel][website] <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"></a>
+# Hi there, I'm Bayu Utomo - aka [byciikel][website] <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"></a>
 
 [![Website](https://img.shields.io/website?label=medium.com&style=for-the-badge&url=https://medium.com/@byciikel)][website]
 
@@ -16,6 +16,12 @@
 [<img align="left" alt="Linkedin @byciikel" width="22px" src="https://unpkg.com/ionicons@5.2.3/dist/svg/logo-linkedin.svg" />][linkedin]
 
 <br />
+
+### Latest Blog Post
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
+<br/>
 
 ---
 
