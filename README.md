@@ -32,14 +32,14 @@
 <details>
   <summary>⚡ GitHub Stats</summary>
 
-  [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=byciikel&show_icons=true&theme=vue)](https://github.com/byciikel/github-readme-stats)
+  [![Byciikel's github stats](https://github-readme-stats.vercel.app/api?username=byciikel&show_icons=true&theme=vue)](https://github.com/byciikel/byciikel)
 
 </details>
 
 <details>
   <summary>⚡ Top Languages</summary>
 
-  [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=byciikel&layout=compact&theme=vue)](https://github.com/byciikel/github-readme-stats)
+  [![Top Langs](https://byciikel.vercel.app/api/top-langs/?username=byciikel&layout=compact&theme=vue)](https://github.com/byciikel/byciikel)
 
 </details>
 
