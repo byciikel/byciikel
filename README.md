@@ -8,7 +8,7 @@
 - 💻 I'm a Software Engineer at [Simpul Technologies][work]
 - 👯 Currently, I'm working with javascript and ruby programming
 - 🔨 I like to challenge myself by trying something new 🤣
-- 🥅 2021 Goals: Make a fun project
+- 🥅 2022 Goals: Make a stable remote development
 
 ### Connect with me:
 
