@@ -16,6 +16,12 @@
     <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
       <rect width="4" height="2" fill="rgba(255,255,255,0.03)"/>
     </pattern>
+    <clipPath id="board">
+      <rect x="40" y="76" width="520" height="200" rx="6"/>
+    </clipPath>
+    <!-- closed loop around the board interior; legs 100/480/100/480 px.
+         keyPoints=keyTimes keeps speed constant across unequal legs. -->
+    <path id="loop" d="M 60,176 L 60,76 L 540,76 L 540,176 L 60,176" fill="none"/>
   </defs>
 
   <!-- cabinet frame -->
@@ -23,67 +29,87 @@
   <rect x="4" y="4" width="592" height="332" rx="14" fill="url(#scan)"/>
 
   <!-- header -->
-  <text x="300" y="42" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="15" letter-spacing="4" fill="#FFD166">BAYU ARCADE</text>
+  <text x="300" y="42" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="15" fill="#FFD166" textLength="180" lengthAdjust="spacing">BAYU ARCADE</text>
   <text x="24" y="42" text-anchor="start" font-family="Menlo, Consolas, monospace" font-size="12" fill="#22D3EE">SCORE 00420</text>
   <text x="576" y="42" text-anchor="end" font-family="Menlo, Consolas, monospace" font-size="12" fill="#FF2E88">HI 999999</text>
   <line x1="20" y1="56" x2="580" y2="56" stroke="url(#glow)" stroke-width="1.5"/>
 
-  <!-- grid board -->
-  <g transform="translate(40 76)">
-    <rect width="520" height="200" rx="6" fill="#0A0A14" stroke="#A78BFA" stroke-opacity="0.35"/>
-    <!-- subtle grid dots -->
-    <g fill="#A78BFA" fill-opacity="0.12">
-      <circle cx="26" cy="26" r="1"/><circle cx="78" cy="26" r="1"/><circle cx="130" cy="26" r="1"/><circle cx="182" cy="26" r="1"/><circle cx="234" cy="26" r="1"/><circle cx="286" cy="26" r="1"/><circle cx="338" cy="26" r="1"/><circle cx="390" cy="26" r="1"/><circle cx="442" cy="26" r="1"/><circle cx="494" cy="26" r="1"/>
-      <circle cx="26" cy="78" r="1"/><circle cx="78" cy="78" r="1"/><circle cx="130" cy="78" r="1"/><circle cx="182" cy="78" r="1"/><circle cx="234" cy="78" r="1"/><circle cx="286" cy="78" r="1"/><circle cx="338" cy="78" r="1"/><circle cx="390" cy="78" r="1"/><circle cx="442" cy="78" r="1"/><circle cx="494" cy="78" r="1"/>
-      <circle cx="26" cy="130" r="1"/><circle cx="78" cy="130" r="1"/><circle cx="130" cy="130" r="1"/><circle cx="182" cy="130" r="1"/><circle cx="234" cy="130" r="1"/><circle cx="286" cy="130" r="1"/><circle cx="338" cy="130" r="1"/><circle cx="390" cy="130" r="1"/><circle cx="442" cy="130" r="1"/><circle cx="494" cy="130" r="1"/>
-      <circle cx="26" cy="174" r="1"/><circle cx="78" cy="174" r="1"/><circle cx="130" cy="174" r="1"/><circle cx="182" cy="174" r="1"/><circle cx="234" cy="174" r="1"/><circle cx="286" cy="174" r="1"/><circle cx="338" cy="174" r="1"/><circle cx="390" cy="174" r="1"/><circle cx="442" cy="174" r="1"/><circle cx="494" cy="174" r="1"/>
+  <!-- board -->
+  <rect x="40" y="76" width="520" height="200" rx="6" fill="#0A0A14" stroke="#A78BFA" stroke-opacity="0.35"/>
+
+  <!-- gameplay, hard-clipped to the board -->
+  <g clip-path="url(#board)">
+    <g filter="url(#neon)">
+      <!-- head: magenta, leads the chain -->
+      <g>
+        <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear"
+          keyPoints="0;0.0862;0.5;0.5862;1" keyTimes="0;0.0862;0.5;0.5862;1">
+          <mpath href="#loop"/>
+        </animateMotion>
+        <rect x="-9" y="-9" width="18" height="18" rx="4" fill="#FF2E88"/>
+      </g>
+      <!-- body: cyan, each trailing the head by one 18px step (12s x 18/1160 = 0.186s).
+           Negative begin = mid-loop at t=0, so nothing waits at the origin. -->
+      <g>
+        <animateMotion dur="12s" repeatCount="indefinite" begin="-11.814s" calcMode="linear"
+          keyPoints="0;0.0862;0.5;0.5862;1" keyTimes="0;0.0862;0.5;0.5862;1">
+          <mpath href="#loop"/>
+        </animateMotion>
+        <rect x="-9" y="-9" width="18" height="18" rx="4" fill="#22D3EE"/>
+      </g>
+      <g>
+        <animateMotion dur="12s" repeatCount="indefinite" begin="-11.628s" calcMode="linear"
+          keyPoints="0;0.0862;0.5;0.5862;1" keyTimes="0;0.0862;0.5;0.5862;1">
+          <mpath href="#loop"/>
+        </animateMotion>
+        <rect x="-9" y="-9" width="18" height="18" rx="4" fill="#22D3EE"/>
+      </g>
+      <g>
+        <animateMotion dur="12s" repeatCount="indefinite" begin="-11.442s" calcMode="linear"
+          keyPoints="0;0.0862;0.5;0.5862;1" keyTimes="0;0.0862;0.5;0.5862;1">
+          <mpath href="#loop"/>
+        </animateMotion>
+        <rect x="-9" y="-9" width="18" height="18" rx="4" fill="#22D3EE"/>
+      </g>
+      <g>
+        <animateMotion dur="12s" repeatCount="indefinite" begin="-11.256s" calcMode="linear"
+          keyPoints="0;0.0862;0.5;0.5862;1" keyTimes="0;0.0862;0.5;0.5862;1">
+          <mpath href="#loop"/>
+        </animateMotion>
+        <rect x="-9" y="-9" width="18" height="18" rx="4" fill="#22D3EE"/>
+      </g>
+      <g>
+        <animateMotion dur="12s" repeatCount="indefinite" begin="-11.07s" calcMode="linear"
+          keyPoints="0;0.0862;0.5;0.5862;1" keyTimes="0;0.0862;0.5;0.5862;1">
+          <mpath href="#loop"/>
+        </animateMotion>
+        <rect x="-9" y="-9" width="18" height="18" rx="4" fill="#22D3EE"/>
+      </g>
+      <g>
+        <animateMotion dur="12s" repeatCount="indefinite" begin="-10.884s" calcMode="linear"
+          keyPoints="0;0.0862;0.5;0.5862;1" keyTimes="0;0.0862;0.5;0.5862;1">
+          <mpath href="#loop"/>
+        </animateMotion>
+        <rect x="-9" y="-9" width="18" height="18" rx="4" fill="#22D3EE"/>
+      </g>
+      <g>
+        <animateMotion dur="12s" repeatCount="indefinite" begin="-10.698s" calcMode="linear"
+          keyPoints="0;0.0862;0.5;0.5862;1" keyTimes="0;0.0862;0.5;0.5862;1">
+          <mpath href="#loop"/>
+        </animateMotion>
+        <rect x="-9" y="-9" width="18" height="18" rx="4" fill="#22D3EE"/>
+      </g>
     </g>
 
-    <!-- food pellet, pulsing -->
-    <circle cx="420" cy="100" r="7" fill="#FFD166" filter="url(#neon)">
+    <!-- pulsing food pellet, off the snake's path -->
+    <circle cx="300" cy="126" r="7" fill="#FFD166" filter="url(#neon)">
       <animate attributeName="r" values="7;4.5;7" dur="0.9s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="1;0.55;1" dur="0.9s" repeatCount="indefinite"/>
     </circle>
-
-    <!-- snake body: 8 segments, each follows the previous with a 0.15s cascade -->
-    <g filter="url(#neon)" fill="#22D3EE">
-      <g><animateTransform attributeName="transform" type="translate" values="60,100;480,100;480,60;60,60;60,100" dur="12s" repeatCount="indefinite" keyTimes="0;0.62;0.76;0.94;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-        <rect x="-9" y="-9" width="18" height="18" rx="4"/>
-        <animate attributeName="fill" values="#FF2E88;#FF2E88;#FF2E88;#FF2E88;#22D3EE" dur="3.6s" repeatCount="indefinite"/>
-      </g>
-      <g><animateTransform attributeName="transform" type="translate" values="38,100;480,100;480,60;60,60;38,100" dur="12s" repeatCount="indefinite" begin="0.15s" keyTimes="0;0.62;0.76;0.94;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-        <rect x="-9" y="-9" width="18" height="18" rx="4"/>
-        <animate attributeName="fill" values="#FF2E88;#FF2E88;#FF2E88;#FF2E88;#22D3EE" dur="3.6s" repeatCount="indefinite" begin="0.15s"/>
-      </g>
-      <g><animateTransform attributeName="transform" type="translate" values="16,100;480,100;480,60;60,60;16,100" dur="12s" repeatCount="indefinite" begin="0.3s" keyTimes="0;0.62;0.76;0.94;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-        <rect x="-9" y="-9" width="18" height="18" rx="4"/>
-        <animate attributeName="fill" values="#FF2E88;#FF2E88;#FF2E88;#FF2E88;#22D3EE" dur="3.6s" repeatCount="indefinite" begin="0.3s"/>
-      </g>
-      <g><animateTransform attributeName="transform" type="translate" values="-6,100;480,100;480,60;60,60;-6,100" dur="12s" repeatCount="indefinite" begin="0.45s" keyTimes="0;0.62;0.76;0.94;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-        <rect x="-9" y="-9" width="18" height="18" rx="4"/>
-        <animate attributeName="fill" values="#FF2E88;#FF2E88;#FF2E88;#FF2E88;#22D3EE" dur="3.6s" repeatCount="indefinite" begin="0.45s"/>
-      </g>
-      <g><animateTransform attributeName="transform" type="translate" values="-28,100;480,100;480,60;60,60;-28,100" dur="12s" repeatCount="indefinite" begin="0.6s" keyTimes="0;0.62;0.76;0.94;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-        <rect x="-9" y="-9" width="18" height="18" rx="4"/>
-        <animate attributeName="fill" values="#FF2E88;#FF2E88;#FF2E88;#FF2E88;#22D3EE" dur="3.6s" repeatCount="indefinite" begin="0.6s"/>
-      </g>
-      <g><animateTransform attributeName="transform" type="translate" values="-50,100;480,100;480,60;60,60;-50,100" dur="12s" repeatCount="indefinite" begin="0.75s" keyTimes="0;0.62;0.76;0.94;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-        <rect x="-9" y="-9" width="18" height="18" rx="4"/>
-        <animate attributeName="fill" values="#FF2E88;#FF2E88;#FF2E88;#FF2E88;#22D3EE" dur="3.6s" repeatCount="indefinite" begin="0.75s"/>
-      </g>
-      <g><animateTransform attributeName="transform" type="translate" values="-72,100;480,100;480,60;60,60;-72,100" dur="12s" repeatCount="indefinite" begin="0.9s" keyTimes="0;0.62;0.76;0.94;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-        <rect x="-9" y="-9" width="18" height="18" rx="4"/>
-        <animate attributeName="fill" values="#FF2E88;#FF2E88;#FF2E88;#FF2E88;#22D3EE" dur="3.6s" repeatCount="indefinite" begin="0.9s"/>
-      </g>
-      <g><animateTransform attributeName="transform" type="translate" values="-94,100;480,100;480,60;60,60;-94,100" dur="12s" repeatCount="indefinite" begin="1.05s" keyTimes="0;0.62;0.76;0.94;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-        <rect x="-9" y="-9" width="18" height="18" rx="4"/>
-        <animate attributeName="fill" values="#FF2E88;#FF2E88;#FF2E88;#FF2E88;#22D3EE" dur="3.6s" repeatCount="indefinite" begin="1.05s"/>
-      </g>
-    </g>
   </g>
 
   <!-- footer: attract-mode blink -->
-  <text x="300" y="310" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="14" letter-spacing="3" fill="#FFD166">INSERT COIN &#9654; PLAY
+  <text x="300" y="310" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="14" fill="#FFD166" textLength="220" lengthAdjust="spacing">INSERT COIN &#9654; PLAY
     <animate attributeName="opacity" values="1;0.15;1" dur="1.2s" repeatCount="indefinite"/>
   </text>
 </svg>
