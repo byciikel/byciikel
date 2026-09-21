@@ -2,18 +2,17 @@
   <img src="docs/assets/banner.svg" width="100%" alt="byciikel — software engineer. Player 1 ready." />
 </div>
 
-<div align="center">
-  software engineer · javascript · ruby · press start ▶
-</div>
+> software engineer · javascript · ruby · press start ▶
 
 <br />
 
 <div align="center">
-  <a href="https://byciikel.github.io/byciikel/">
+  <a href="https://byciikel.my.id">
     <img src="docs/assets/arcade-snake.svg" width="520" alt="Self-playing arcade snake demo. Click to play the real game." />
   </a>
-  <br />
-  <sub>the screen plays itself — <a href="https://byciikel.github.io/byciikel/"><b>insert coin ▶ play</b></a></sub>
+  <h3>
+    <a href="https://byciikel.my.id">insert coin ▶ play</a>
+  </h3>
 </div>
 
 <br />
@@ -34,22 +33,10 @@
 - [Deteksi Mock Location menggunakan React Native](https://medium.com/@byciikel/deteksi-mock-location-menggunakan-react-native-1847d3e6b053?source=rss-b98a4a854a45------2)
 <!-- BLOG-POST-LIST:END -->
 
-### stats
-
-<div>
-  <a href="https://github.com/byciikel/byciikel">
-    <img src="docs/assets/stats.svg" height="150" alt="GitHub player stats" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/byciikel/byciikel">
-    <img src="docs/assets/languages.svg" height="150" alt="Top languages" />
-  </a>
-</div>
-
 <br />
 
-<div>
-  <a href="https://medium.com/@byciikel"><img alt="Medium @byciikel" width="24px" src="https://unpkg.com/ionicons@5.2.3/dist/svg/logo-medium.svg" /></a>
+<div align="center">
+  <a href="https://medium.com/@byciikel"><img alt="Medium @byciikel" width="26px" src="https://unpkg.com/ionicons@5.2.3/dist/svg/logo-medium.svg" /></a>
   &nbsp;&nbsp;
-  <a href="https://www.linkedin.com/in/byciikel"><img alt="Linkedin @byciikel" width="24px" src="https://unpkg.com/ionicons@5.2.3/dist/svg/logo-linkedin.svg" /></a>
+  <a href="https://www.linkedin.com/in/byciikel"><img alt="Linkedin @byciikel" width="26px" src="https://unpkg.com/ionicons@5.2.3/dist/svg/logo-linkedin.svg" /></a>
 </div>
