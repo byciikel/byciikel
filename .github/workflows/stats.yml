@@ -1,0 +1,38 @@
+name: Refresh player stats
+
+on:
+  schedule:
+    - cron: '30 3 * * *' # Daily, after the contribution snake
+  workflow_dispatch: # Run manually from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stats
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    name: Generate stats cards
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate stats SVGs
+        run: node scripts/generate-stats.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/assets/stats.svg docs/assets/languages.svg
+          git diff --cached --quiet || git commit -m "refresh player stats [skip ci]"
+          git push

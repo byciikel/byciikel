@@ -38,11 +38,11 @@
 
 <div>
   <a href="https://github.com/byciikel/byciikel">
-    <img height="150" src="https://github-readme-stats.vercel.app/api?username=byciikel&show_icons=true&hide_border=true" alt="GitHub stats" />
+    <img src="docs/assets/stats.svg" height="150" alt="GitHub player stats" />
   </a>
   &nbsp;&nbsp;
   <a href="https://github.com/byciikel/byciikel">
-    <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=byciikel&layout=compact&hide_border=true" alt="Top languages" />
+    <img src="docs/assets/languages.svg" height="150" alt="Top languages" />
   </a>
 </div>
 

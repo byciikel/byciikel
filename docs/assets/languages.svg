@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 195" width="400" height="195" role="img" aria-label="Top languages for byciikel">
+  <rect width="400" height="195" rx="12" fill="#0A0A14"/>
+  <rect x="0.5" y="0.5" width="399" height="194" rx="12" fill="none" stroke="#A78BFA" stroke-opacity="0.35"/>
+  <text x="24" y="34" font-family="Menlo, Consolas, monospace" font-size="13" fill="#22D3EE" textLength="120" lengthAdjust="spacing">TOP LANGUAGES</text>
+  <text x="376" y="34" text-anchor="end" font-size="11" fill="#A78BFA">@byciikel</text>
+  <circle cx="30" cy="58" r="5" fill="#FF2E88"/>
+  <text x="44" y="62" font-size="12" fill="#E8E6F0">C</text>
+  <text x="376" y="62" text-anchor="end" font-size="12" fill="#8B87A0">80.7%</text>
+  <circle cx="30" cy="80" r="5" fill="#22D3EE"/>
+  <text x="44" y="84" font-size="12" fill="#E8E6F0">CSS</text>
+  <text x="376" y="84" text-anchor="end" font-size="12" fill="#8B87A0">11.4%</text>
+  <circle cx="30" cy="102" r="5" fill="#FFD166"/>
+  <text x="44" y="106" font-size="12" fill="#E8E6F0">C++</text>
+  <text x="376" y="106" text-anchor="end" font-size="12" fill="#8B87A0">4.4%</text>
+  <circle cx="30" cy="124" r="5" fill="#A78BFA"/>
+  <text x="44" y="128" font-size="12" fill="#E8E6F0">Python</text>
+  <text x="376" y="128" text-anchor="end" font-size="12" fill="#8B87A0">1.4%</text>
+  <circle cx="30" cy="146" r="5" fill="#4ADE80"/>
+  <text x="44" y="150" font-size="12" fill="#E8E6F0">Makefile</text>
+  <text x="376" y="150" text-anchor="end" font-size="12" fill="#8B87A0">1.0%</text>
+  <rect x="24" y="166" width="284.2" height="8" fill="#FF2E88"/><rect x="308.17521716312854" y="166" width="40.0" height="8" fill="#22D3EE"/><rect x="348.19883298499565" y="166" width="15.5" height="8" fill="#FFD166"/><rect x="363.66128830200626" y="166" width="4.8" height="8" fill="#A78BFA"/><rect x="368.460859538485" y="166" width="3.5" height="8" fill="#4ADE80"/>
+</svg>
