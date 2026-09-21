@@ -1,23 +1,31 @@
-# Hi there, I'm Bayu Utomo - aka [byciikel][website] <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"></a>
+<div align="center">
+  <img src="docs/assets/banner.svg" width="100%" alt="byciikel — software engineer. Player 1 ready." />
+</div>
 
-[![Website](https://img.shields.io/website?label=medium.com&style=for-the-badge&url=https://medium.com/@byciikel)][website]
-
-> Just a tech enthusiast who is love to share my thoughts on software development, especially javascript and ruby programming.
-
-**Who am I?**
-- 💻 I'm a Software Engineer at [Simpul Technologies][work]
-- 👯 Currently, I'm working with javascript and ruby programming
-- 🔨 I like to challenge myself by trying something new 🤣
-- 🥅 2022 Goals: Make a stable remote development
-
-### Connect with me:
-
-[<img align="left" alt="Medium @byciikel" width="22px" src="https://unpkg.com/ionicons@5.2.3/dist/svg/logo-medium.svg" />][website]
-[<img align="left" alt="Linkedin @byciikel" width="22px" src="https://unpkg.com/ionicons@5.2.3/dist/svg/logo-linkedin.svg" />][linkedin]
+<div align="center">
+  software engineer · javascript · ruby · press start ▶
+</div>
 
 <br />
 
-### Latest Blog Post
+<div align="center">
+  <a href="https://byciikel.github.io/byciikel/">
+    <img src="docs/assets/arcade-snake.svg" width="520" alt="Self-playing arcade snake demo. Click to play the real game." />
+  </a>
+  <br />
+  <sub>the screen plays itself — <a href="https://byciikel.github.io/byciikel/"><b>insert coin ▶ play</b></a></sub>
+</div>
+
+<br />
+
+**inventory:** JavaScript · Ruby · React · React Native · Node.js · RedwoodJS · Tailwind CSS
+
+<div align="center">
+  <img src="docs/assets/divider.svg" width="100%" alt="" />
+</div>
+
+### posts
+
 <!-- BLOG-POST-LIST:START -->
 - [Is RedwoodJS Worth Looking Into?](https://medium.com/simpul-technologies/is-redwoodjs-worth-looking-into-214933f9b114?source=rss-b98a4a854a45------2)
 - [Setting up react-router-dom untuk routing page React JS](https://medium.com/@byciikel/setting-up-react-router-dom-untuk-routing-page-react-js-39e78975e534?source=rss-b98a4a854a45------2)
@@ -26,24 +34,22 @@
 - [Deteksi Mock Location menggunakan React Native](https://medium.com/@byciikel/deteksi-mock-location-menggunakan-react-native-1847d3e6b053?source=rss-b98a4a854a45------2)
 <!-- BLOG-POST-LIST:END -->
 
-<br/>
+### stats
 
----
+<div>
+  <a href="https://github.com/byciikel/byciikel">
+    <img height="150" src="https://github-readme-stats.vercel.app/api?username=byciikel&show_icons=true&hide_border=true" alt="GitHub stats" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/byciikel/byciikel">
+    <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=byciikel&layout=compact&hide_border=true" alt="Top languages" />
+  </a>
+</div>
 
-<details>
-  <summary>⚡ GitHub Stats</summary>
+<br />
 
-  [![Byciikel's github stats](https://github-readme-stats.vercel.app/api?username=byciikel&show_icons=true&theme=vue)](https://github.com/byciikel/byciikel)
-
-</details>
-
-<details>
-  <summary>⚡ Top Languages</summary>
-
-  [![Top Langs](https://byciikel.vercel.app/api/top-langs/?username=byciikel&layout=compact&theme=vue)](https://github.com/byciikel/byciikel)
-
-</details>
-
-[website]: https://medium.com/@byciikel
-[linkedin]: https://www.linkedin.com/in/byciikel
-[work]: https://simpul.tech/
+<div>
+  <a href="https://medium.com/@byciikel"><img alt="Medium @byciikel" width="24px" src="https://unpkg.com/ionicons@5.2.3/dist/svg/logo-medium.svg" /></a>
+  &nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/byciikel"><img alt="Linkedin @byciikel" width="24px" src="https://unpkg.com/ionicons@5.2.3/dist/svg/logo-linkedin.svg" /></a>
+</div>
